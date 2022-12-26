@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 2105874252}
   - component: {fileID: 2105874251}
   - component: {fileID: 2105874250}
-  - component: {fileID: 2105874249}
+  - component: {fileID: 2105874253}
   m_Layer: 5
   m_Name: Add_Btn
   m_TagString: Untagged
@@ -672,19 +672,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2105874249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105874247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39daaee8ecd23846af3a12ade6f90b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myText: {fileID: 118017069}
 --- !u!114 &2105874250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,8 +716,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2105874249}
-        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
+      - m_Target: {fileID: 2105874253}
+        m_TargetAssemblyTypeName: ScoreUpdaterUsingScripEvent, Assembly-CSharp
         m_MethodName: add
         m_Mode: 3
         m_Arguments:
@@ -779,3 +766,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105874247}
   m_CullTransparentMesh: 1
+--- !u!114 &2105874253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105874247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef92837cba1627b48a87ea3d45e50fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 118017069}

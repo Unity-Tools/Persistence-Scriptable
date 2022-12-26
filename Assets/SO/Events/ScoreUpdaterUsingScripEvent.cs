@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreUpdaterByEvent : MonoBehaviour
+public class ScoreUpdaterUsingScripEvent : MonoBehaviour
 {
-
     public Text myText;
     int score = 0;
 
@@ -24,6 +21,8 @@ public class ScoreUpdaterByEvent : MonoBehaviour
 
     void refresh()
     {
-        myText.text =  " Your Score is " + score.ToString();
+        myText.text = " Your Score is " + score.ToString();
     }
 }
+
+
