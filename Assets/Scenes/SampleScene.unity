@@ -644,7 +644,6 @@ GameObject:
   - component: {fileID: 2095694836}
   - component: {fileID: 2095694835}
   - component: {fileID: 2095694838}
-  - component: {fileID: 2095694839}
   m_Layer: 5
   m_Name: Add_Btn
   m_TagString: Untagged
@@ -716,7 +715,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2095694836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2095694838}
+        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
+        m_MethodName: add
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2095694836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,31 +781,3 @@ MonoBehaviour:
   score: {fileID: 11400000, guid: 440042e73289d5a45aaa9f792477fc35, type: 2}
   user: {fileID: 11400000, guid: 496c2f482e9535f4d8087ff75c7d3c9b, type: 2}
   myText: {fileID: 1144816185}
---- !u!114 &2095694839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095694832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46123390431d5824e82bd7ac04cfdf08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: ba087e4464e187942a3f50207a4a3769, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2095694838}
-        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
-        m_MethodName: add
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
