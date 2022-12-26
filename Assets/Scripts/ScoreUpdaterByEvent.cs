@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreUpdater : MonoBehaviour
+public class ScoreUpdaterByEvent : MonoBehaviour
 {
 
     public Text myText;
