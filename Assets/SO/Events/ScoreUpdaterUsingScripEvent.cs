@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreUpdaterUsingScripEvent : MonoBehaviour
 {
-    public Text myText;
+    Text myText;
     int score = 0;
 
     protected void Start()
     {
+        myText = this.GetComponent<Text>();
         refresh();
     }
 
