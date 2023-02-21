@@ -19,13 +19,7 @@ namespace SO.Events
                 soEvent.Raise();
             }
             
-            GUILayout.Label("This is List of Event Listners: \n");
-
-
-            //Gui list For all Listner
-
-
-            // GUILayout.Label(soEvent.listeners.ToArray().ToString());         
+            GUILayout.Label("This is List of Event Listners: \n");      
 
             for (int i = 0; i < soEvent.listeners.Count; i++)
             {
