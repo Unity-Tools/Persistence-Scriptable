@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace SoEventDemoExample
 {
-    public class AddScore : MonoBehaviour
+    public class UpdateScore : MonoBehaviour
     {
         Text myText;
         int score = 0;
@@ -21,7 +21,11 @@ namespace SoEventDemoExample
             score += amount;
             refresh();
         }
-
+        public void sub(int amount)
+        {
+            score -= amount;
+            refresh();
+        }
         void refresh()
         {
             myText.text = " Your Score is " + score.ToString();
