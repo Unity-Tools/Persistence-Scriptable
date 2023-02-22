@@ -14,7 +14,7 @@ public class SOEvent : ScriptableObject
     {
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
-            listeners[i].OnEventRaised();
+            listeners[i].OnEventRaised(this.name);
         }
     }
     public void RegisterListener(SOEventListner listener)
