@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Score
   m_EditorClassIdentifier: 
   AllowCash: 1
-  Value: 20
-  StartingValue: 20
+  value: 10
+  startingValue: 0

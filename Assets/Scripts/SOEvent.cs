@@ -26,5 +26,5 @@ public class SOEvent : ScriptableObject
     {
         listeners.Remove(listener);
     }
-                    
+  
 }

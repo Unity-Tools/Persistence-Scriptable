@@ -7,28 +7,29 @@ namespace SoEventDemoExample
 {
     public class UpdateScore : MonoBehaviour
     {
+        public ScriptableInt score;
         Text myText;
-        int score = 0;
-
+        int scoreText = 0;
+        
         protected void Start()
         {
             myText = this.GetComponent<Text>();
             refresh();
         }
 
-        public void add(int amount)
+        public void add(ScriptableInt score)
         {
-            score += amount;
+            scoreText += score.value;
             refresh();
         }
-        public void sub(int amount)
+        public void sub(ScriptableInt score)
         {
-            score -= amount;
+            scoreText -= score.value;
             refresh();
         }
         void refresh()
         {
-            myText.text = " Your Score is " + score.ToString();
+            myText.text = " Your Score is " + scoreText.ToString();
         }
     }
 }

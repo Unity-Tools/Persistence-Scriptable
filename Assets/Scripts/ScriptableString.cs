@@ -4,11 +4,9 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "New String",menuName = "SO/Variable/String")]
-public class ScriptableString : PersistenceScriptableVariables
+public class ScriptableString : PersistenceScriptableVariables<string>
 {
-    public string Value;
-    public string StartingValue;
-    public override object MyValue { get { return (string)Value; } set { Value = (string)value; } }
-    public override object MyStartingValue { get { return (string)StartingValue; } set { StartingValue = (string)value; } }
+    public override string Value { get { return (string)value; } set { Value = (string)value; } }
+    public override string StartingValue { get { return (string)startingValue; } set { startingValue = (string)value; } }
 }
 

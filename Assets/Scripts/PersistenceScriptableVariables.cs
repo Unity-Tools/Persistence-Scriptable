@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,14 +8,15 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public abstract class PersistenceScriptableVariables : ScriptableObject
+public abstract class PersistenceScriptableVariables<T> : ScriptableObject
 {
     public bool AllowCash;
-    public object Value;
-    [NonSerialized]
-    public object StartingValue;
-    public virtual object MyValue { get { return Value; } set { Value = value; } }
-    public virtual object MyStartingValue { get { return StartingValue; } set { StartingValue = value; } }
+  //  [NonSerialized]
+    public T value;
+   // [NonSerialized]
+    public T startingValue;
+    public virtual T Value { get { return value; } set { this.value = value; } }
+    public virtual T StartingValue { get { return startingValue; } set { startingValue = value; } }
 
     protected void OnEnable()
     {
@@ -28,7 +29,7 @@ public abstract class PersistenceScriptableVariables : ScriptableObject
         {
             if (AllowCash)
             {
-                JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(name), MyValue);
+                JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(name), Value);
             }
         }
     }
@@ -41,7 +42,7 @@ public abstract class PersistenceScriptableVariables : ScriptableObject
         }
         else 
         {
-            PlayerPrefs.SetString(name, JsonUtility.ToJson(MyValue));
+            PlayerPrefs.SetString(name, JsonUtility.ToJson(Value));
         }
 
 
@@ -49,7 +50,7 @@ public abstract class PersistenceScriptableVariables : ScriptableObject
 
     protected void ResetValue()
     {
-        MyValue = MyStartingValue;
+        Value = StartingValue;
     }
 
 }

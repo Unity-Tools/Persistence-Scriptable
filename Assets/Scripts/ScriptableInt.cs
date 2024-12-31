@@ -4,11 +4,9 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "New Int",menuName = "SO/Variable/Int")]
-public class ScriptableInt : PersistenceScriptableVariables
+public class ScriptableInt : PersistenceScriptableVariables<int>
 {
-    public int Value;
-    public int StartingValue;
-    public override object MyValue { get { return (int)Value; } set { Value = (int)value; } }
-    public override object MyStartingValue { get { return (int)StartingValue; } set { StartingValue = (int)value; } }
+    public override int Value{ get { return (int)value; } set { value = (int)value; } }
+    public override int StartingValue { get { return (int)startingValue; } set { startingValue = (int)value; } }
 }
 

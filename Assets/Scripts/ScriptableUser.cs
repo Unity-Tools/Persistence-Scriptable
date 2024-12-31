@@ -12,13 +12,9 @@ public struct UserData
 }
 
 [CreateAssetMenu(fileName ="New User", menuName = "SO/Variable/User")]
-public class ScriptableUser : PersistenceScriptableVariables
+public class ScriptableUser : PersistenceScriptableVariables<UserData>
 {
-
-    public UserData Value;
-    public UserData StartingValue;
-
-    public override object MyValue { get { return (UserData)Value; } set { Value = (UserData)value; } }
-    public override object MyStartingValue { get { return (UserData)StartingValue; } set { StartingValue = (UserData)value; } }
+    public override UserData Value { get { return (UserData)value; } set { value = (UserData)value; } }
+    public override UserData StartingValue { get { return (UserData)startingValue; } set { startingValue = (UserData)value; } }
 
 }
